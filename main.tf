@@ -7,8 +7,8 @@ resource "aws_instance" "myawsserver" {
   key_name = "supnew-import"
 
   tags = {
-    Name = "sup-devops-ec2-instance-v0"
-    env = "prod"
+    Name = "sup-devops-ec2-instance-v1"
+    env = "dev"
   }
   provisioner "local-exec" {
     command = "echo The servers IP address is ${self.public_ip} && echo ${self.public_ip} > /root/inv"
